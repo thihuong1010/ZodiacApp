@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zodiac App</title>
 
-    <link rel="stylesheet" type="text/html" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!--js-->
     <script src="index.js"></script>
+
+    <!--style-->
+    
 </head>
 <body>
 
@@ -34,17 +37,63 @@
                         placeholder="Type zodiac name ...">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-danger" onclick="getData()" type="button">Find</button>
+                        <button class="btn btn-danger" onclick="getData()" type="button" id=" my-btn">Find</button>
                     </div>
                 </form>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7" id="info">
+                <div id="name-signs">
+                    <div class="row">
+                        <div class="col-sm">
+                            Aries: Mar 21 - Apr 20
+                        </div>
+                        <div class="col-sm">
+                            Taurus: Apr 21 - May 20
+                        </div>
+                        <div class="col-sm">
+                            Gemini: May 21 - Jun 20
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Cancer: Jun 21 - Jul 22
+                        </div>
+                        <div class="col-sm">
+                            Leo: Jul 23 - Aug 22
+                        </div>
+                        <div class="col-sm">
+                            Virgo: Aug 23 - Sep 22
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Libra: Sep 23 - Oct 22
+                        </div>
+                        <div class="col-sm">
+                            Scorpio: Oct 23 - Nov 22
+                        </div>
+                        <div class="col-sm">
+                            Sagittarius: Nov 23 - Dec 21
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Capricorn: Dec 22 - Jan 19
+                        </div>
+                        <div class="col-sm">
+                            Aquarius: Jan 20 - Feb 18
+                        </div>
+                        <div class="col-sm">
+                            Pisces: Feb 19 - Mar 20
+                        </div>
+                    </div>
+                </div>
                 <h2 id="name"></h2>
-             <h4 id="date"></h4>
+                <h4 id="date"></h4>
                 <div class="media">
                    <img class="mr-3" id="img">
-             </div>
-             <p id="text-result"></p>
+                </div>
+                <p id="text-result"></p>
             </div>
         </div>
 
@@ -55,7 +104,7 @@
               <!--Grid row-->
               <div class="row">
                 <!--Grid column-->
-                <div class="col-md-12 mb-4 mb-md-0">
+                <div class="col-md-12 mb-4 mb-md-0" id="note">
                   <h5 class="text-uppercase">Note</h5>
                   <p>
                     All informations about zodiac signs that are referenced from internet!
@@ -75,6 +124,17 @@
             <!-- Copyright -->
           </footer>
    </div>
+
+   <!--enter-->
+   <script>
+    const input = document.getElementById("user-search");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+       event.preventDefault();
+       document.getElementById("my-btn").click();
+      }
+    });
+    </script>
 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
