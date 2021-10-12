@@ -6,7 +6,7 @@ const app = express();
 // __dirname : current project
 app.use(express.static(__dirname + '/frontend'));
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
     console.log('Server is running by nodemon on port ' + port);
