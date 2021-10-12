@@ -7,13 +7,8 @@ footer {
     background-color: rgb(152, 156, 160);
 }
 
-#info {
-    background-color: rgb(248, 174, 186);
-}
-
 #name-signs {
     display: grid;
-    background-color: antiquewhite;
     margin: auto;
     margin-top: 16px;
     width: 100%;
@@ -22,8 +17,4 @@ footer {
 
 .col-sm {
     height: 40px;
-}
-
-#note {
-    background-color: rgb(166, 168, 170);
 }
